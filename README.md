@@ -6,17 +6,17 @@ Recently I demoed a small end-to-end proof of concept for SCP Workflow at UI5con
 For the SAP spiel about workflow and pricing options, have a look at the [introduction page](https://cloudplatform.sap.com/dmp/capabilities/us/product/SAP-Cloud-Platform-Workflow/df696e5a-d973-4ecd-8d8d-532d60aa1921) here. 
 
 ### This document covers:
-1. activating workflow on your trial account dashboard and WebIDE
-1. allocating all workflow authorisation roles to your user
-1. optionally, installing the demo applications consisting of
-    1. an app you can deploy to the launchpad to start a workflow
-    1. an inbox application for your approve and reject scenarios
-    1. a small but complete workflow with service-, user- and script tasks
-    1. the setup of a destination on your account if you want to showcase an API call I have prepared
-1. How does everything fit together
-    1. Starting a workflow
-    1. Birds eye view of the workflow
-    1. What does that service do
+1. Activating workflow on your trial account dashboard and WebIDE,
+1. Allocating all workflow authorisation roles to your user,
+1. Optionally, installing the demo applications consisting of:
+    1. An app you can deploy to the launchpad to start a workflow,
+    1. An inbox application for your approve and reject scenarios,
+    1. A small but complete workflow with service-, user- and script tasks,
+    1. The setup of a destination on your account if you want to showcase an API call I have prepared
+1. How does the demo fit together:
+    1. Starting a workflow,
+    1. Birds eye view of the workflow,
+    1. What does that service do,
     1. Monitoring a workflow
 1. Usefull resources
 
@@ -59,7 +59,7 @@ That's the whole setup. If you're happy to go and have a play you can stop readi
 
 ##### Clone these repositories
 
-Go forth and clone the following repositories in your WebIDE (feel free to fork them before you clone them so you can save your changes back to Github):
+Go forth and clone the following repositories in your WebIDE (feel free to fork them before you clone them so you can sync your changes back to Github):
 
 - The [starter application](https://github.com/jorgt/wf-demo-app.git).
 - The [inbox application](https://github.com/jorgt/wf-demo-inbox-screen)
@@ -69,12 +69,29 @@ After cloning, deploy all apps to the cloud platform. For the starter applicatio
 
 [screen]
 
+This has tripped me up a few times, so be sure to take it into account when deploying any changes.
+
 ##### Create a destination
 
 Using script tasks alone is a great way to build an MVP of your workflow. You're not dependent on anything and you can develop entirely within the confines of the WebIDE. However as a full stack demo this is kind of boring so I'm providing a stupidly simple service. You send it the workflow requestor details (that's you!) and it will return those details twice as approvers. More details below. 
 
 In order to call it, create a destination on your dashboard that looks like this:
 
+[screen]
+
+You can forego this, but in that case you'll need to find the service task that fetches approvers (it's the first step in the workflow) and replace it with a service task to provide the same object on the context:
+
+    [{
+        Name: 'Approver 1',
+        Id: 'P2000037788',
+        Email: 'jorg@thuijls.net'
+     }, {
+        Name: 'Approver 2',
+        Id: 'P2000037788',
+        Email: 'jorg@thuijls.net'     
+     }];
+
+This array can have a many approvers as you like, although I'd pick at least one. Be aware that your username is CASE SENSITVIE, so `P2000037788` is not the same as `p2000037788`.
 
 ### Usefull resources
 
