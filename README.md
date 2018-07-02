@@ -18,13 +18,22 @@ For the SAP spiel about workflow and pricing options, have a look at the [introd
 ### 1. Activating workflow
 
 ##### On the dashboard
-Workflow is provided as a service on your SCP Dashboard like everything else. Its prerequisites are the activation of the portal (launchpad) and the WebIDE so head over to the services link and check that all of these are enabled. If you haven't activated the portal yet, make sure to head into the configuration and set up a default site
+Workflow is provided as a service on your SCP Dashboard like everything else. Its prerequisites are the activation of the portal (launchpad) and the WebIDE so head over to the services link and check that all of these are enabled. 
 
-![portal service](img/1 services portal.png?raw=true "Activate portal service")
+First, make sure the portal is activated. If you haven't set it up fully yet, make sure to head into the configuration and set up a default site so you can deploy the started application, and to have a spot for the workflow monitoring apps. 
 
+![portal service](img/1-services-portal.png?raw=true "Activate portal service")
+
+Next, enable the WebIDE. Make sure to pick the full stack one, the 'normal' one will be depricated at some point.
+
+![webide service](img/1-services-webide.png?raw=true "Activate webide service")
+
+Once the other two are active, flip the switch on the workflow.
+![workflow service](img/1-services-workflow.png?raw=true "Activate workflow service")
 
 ##### In the WebIDE
 
+Once you're in the WebIDE
 
 ### 2. Workflow authorisations
 
