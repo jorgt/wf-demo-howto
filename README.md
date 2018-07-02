@@ -26,16 +26,23 @@ First, make sure the portal is activated. If you haven't set it up fully yet, ma
 
 Next, enable the WebIDE. Make sure to pick the full stack one, the 'normal' one will be depricated at some point.
 
-![webide service](img/1-services-webide.png?raw=true "Activate webide service")
+![webide service](img/2-services-webide.png?raw=true "Activate webide service")
 
 Once the other two are active, flip the switch on the workflow.
-![workflow service](img/1-services-workflow.png?raw=true "Activate workflow service")
+![workflow service](img/3-services-workflow.png?raw=true "Activate workflow service")
 
 ##### In the WebIDE
 
-Once you're in the WebIDE
+Once you're in the WebIDE, be sure to activate the workflow plugin. SCP workflow has a neat drag-and-drop style editor which will not be available until you do.
+
+![workflow service](img/7-webide-activate.png?raw=true "Activate workflow plugin")
 
 ### 2. Workflow authorisations
+
+Workflow comes with a fairly fine grained set of authorisations. For the purpose of your demos, I suggest you give your user everything in the `swf` category
+
+![workflow service](img/4-auth-workflow.png?raw=true "Activate workflow service")
+
 
 ### 3. Install the demo applications
 
