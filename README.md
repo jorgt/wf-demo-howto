@@ -5,6 +5,8 @@ Recently I demoed a small end-to-end proof of concept for SCP Workflow at UI5con
 
 For the SAP spiel about workflow and pricing options, have a look at the [introduction page](https://cloudplatform.sap.com/dmp/capabilities/us/product/SAP-Cloud-Platform-Workflow/df696e5a-d973-4ecd-8d8d-532d60aa1921) here. 
 
+I recommend using a trial account to follow along, because a bunch of the features used below are not free on a commercial account. 
+
 ### This document covers:
 1. Activating workflow on your trial account dashboard and WebIDE,
 1. Allocating all workflow authorisation roles to your user,
@@ -61,7 +63,7 @@ That's the whole setup. If you're happy to go and have a play you can stop readi
 
 Go forth and clone the following repositories in your WebIDE (feel free to fork them before you clone them so you can sync your changes back to Github):
 
-- The [starter application](https://github.com/jorgt/wf-demo-app.git).
+- The [starter application](https://github.com/jorgt/wf-demo-app).
 - The [inbox application](https://github.com/jorgt/wf-demo-inbox-screen)
 - The [workflow](https://github.com/jorgt/wf-demo-workflow) itself. 
 
